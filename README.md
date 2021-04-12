@@ -1,1 +1,12 @@
 Hello! this is my second attempt at project: Rock Paper Scissors
+
+Learned
+- Creating a problem solving plan before writing code 
+- Creating a repository and connect to local machine
+- Linking external .JS file 
+- Using functions to randomly choose item from arrays and return it
+- Use if...else statements to play a single round of RPS
+- Making functions case-insensitive
+
+Currently Working on
+- 

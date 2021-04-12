@@ -7,6 +7,5 @@ Learned
 - Using functions to randomly choose item from arrays and return it
 - Use if...else statements to play a single round of RPS
 - Making functions case-insensitive
-
-Currently Working on
-- 
+- Creating prompt() to allow user to input value
+- Creating a function that returns the result of another function inside - Callback? 

@@ -9,3 +9,4 @@ Learned
 - Making functions case-insensitive
 - Creating prompt() to allow user to input value
 - Creating a function that returns the result of another function inside - Callback? 
+- Use increments to keep score of 5 round game and declare winner at the end

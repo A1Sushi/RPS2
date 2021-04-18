@@ -15,8 +15,7 @@ function computerPlay() {
 // if else repeat for each possibility
 // else invalid choice 
 // Make playerSelection parameter case-insensitive 
-
-// Display Scores (added console log for scores for every possibility)
+// Display Scores (added console.log scores for every possibility)
 
 function playRound(playerSelection, computerSelection) {
     console.log(playerSelection)
@@ -41,6 +40,8 @@ function playRound(playerSelection, computerSelection) {
         console.log(computerScore)
         return "You Win! Paper beats Rock"; 
     } else if (playerSelection === "paper" && computerSelection === "paper") {
+        console.log(playerScore)
+        console.log(computerScore)
         return "Tie!"; 
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         console.log(playerScore)
@@ -64,10 +65,9 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
-// prompt("Rock, Paper, or Scissors?").toLowerCase();
-let computerSelection = computerPlay();
-//console.log(playRound(playerSelection, computerSelection));
+// let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
+// let computerSelection = computerPlay();
+// console.log(playRound(playerSelection, computerSelection));
 
 // Create function that plays a game 5x using the playRound function inside & keeps score each round declaring the winner at the end. 
 // No interface played in the console
@@ -81,46 +81,41 @@ let computerSelection = computerPlay();
     // 2. Use increment operator to add score (might have to do this in playRound) 
 // else (computer wins) increment computerScore by 1 
 // Make sure scores are saved after each round 
-// When playerScore or computerScore === 5, return message declaring winner!  
+// After 5 rounds return message declaring winner based on highest score!  
 
 function game() {
-    return playRound(playerSelection, computerPlay());
+    return playRound(playerSelection(), computerPlay());
 }
 
 // variable outside so score increases not be the same each function call
 let playerScore = 0
 let computerScore = 0
 
-// Round 1
-console.log(playRound(playerSelection, computerSelection));
+// Round 1 
+console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
 // Round 2
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
 // Round 3
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
 // Round 4
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
 // Round 5
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
 
 // Result of 5 games played 
 if (playerScore > computerScore) {
-    alert ("You Won!!!");
+    alert ("Game Won!!");
 } else if (playerScore < computerScore) {
     alert ("Computer Wins Game :(");
 } else {
     alert ("Tie Game!");
 }
 
-// Currently on
-    // 1. Code works, now try and make the results work from calling playRound() x5; 
-    // Currently works in global scope using console.log, try adding the score stuff into playRound() can always got back to gitHub to revert if you mess up
-    // 2. Added scores inside function of playRound using console.log 
+//Currently on
+    // 1. Figure out step 6 part 4. 
+        // Code is good but you could have it return more than just the message. It could return the scores as well (Example) (will cover in objects soon)
+    // 2. you could try putting the prompt thing into a function though, then call that in the playround
+          // Can leave code as it is as you will learn more in loops 
 
-// Question for TOP Discord
-    // 1. For part 6, I was wondering if there should be a prompt() for the player to select their choice every round up until round 5 even if I'm not using a loop function?
-    // 2. What does part 4 mean by changing return value to something useful
-    
-    // 3. I'm wondering why I can't make the function's playerSelection parameter case-insenstive, only the global variable works
-        // = lots of ways, just keep moving along
-    // 3. For Step 6 (part 1), since I haven't learned how to loop yet, would calling my``playRound()`` function 5 times have to show the  final score or is that only  once i learn loops?
-        // Answer = Display results each round and winner @ the end 
+// Questions
+    // 1. 

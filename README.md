@@ -8,17 +8,9 @@ Learned
 - Use if...else statements to play a single round of RPS
 - Making functions case-insensitive
 - Creating prompt() to allow user to input value
-- Creating a function that returns the result of another function inside - Callback? 
-- Use increments to keep score of 5 round game and declare winner at the end
-    
-Recently Done
-1. Added scores inside function of playRound using console.log 
-2. Used computerPlay instead of computerSelection to randomize each round, prompt instead of playerSelection to choose new value each round
-3. make the results work from calling playRound() x5;
-4. Make playerSelection input value different each round 
-
-Question for TOP Discord
-1. Console.log is only to test right, so I still have to make sure the function call works the same way?
+- Using callback functions
+- Using increments to keep score of 5 round game and declare winner at the end
+- Using loops to play through 5 rounds of a game
     
 Question Solved 
 1. I'm wondering why I can't make the function's playerSelection parameter case-insenstive, only the global variable works
@@ -31,3 +23,7 @@ Question Solved
     - Your code is fine and you can move on to loops 
 5. What does part 4 mean by changing return value to something useful
     - Will cover in objects (basically like having multiple return values but not really since you can only return one value)
+6. Figure out step 6 part 4. 
+    - Code is good but you could have it return more than just the message. It could return the scores as well (Example) (will cover in objects soon)
+7. you could try putting the prompt thing into a function though, then call that in the playround
+    - Can leave code as it is as you will learn more in loops 

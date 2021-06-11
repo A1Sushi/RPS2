@@ -215,7 +215,13 @@ const buttons = document.querySelectorAll('button');
 // Use method to iterate through buttons and add 'click' 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        // Alert winner once someone reaches a score of 5
         playRound(button.id, computerPlay());
+        if (playerScore === 5) {
+            alert("Player Wins Game!!!");
+        } else if (computerScore === 5) {
+            alert("Computer Wins Game :(");
+        }
     })
 })
 
@@ -224,9 +230,7 @@ buttons.forEach((button) => {
 //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase();, computerPlay()));
 
 /* Currently @
-1. Add a div for displaying results and change all of your console.logs into DOM methods.
-2. Working on the DOMS for rock vs rock 
-3. Refractor code for playRound into smaller codes 
+1. Refractor code for playRound into smaller codes 
     - So, it looks like you have all that code repeated through all 9 if statements? If so, then yes that's not ideal. Save yourself some writing and make your function much more maintainable by eliminating the duplication. Don't be afraid to write extra functions.
     - You can definitely make things a lot easier on yourself by moving some of that conditional code into a function or multiple functions and simplifying your playRound function.
 */

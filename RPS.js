@@ -1,69 +1,169 @@
 // Create a function that returns the string "rock", "paper", or "scissors" when called 
     // when computerPlay is called *
     // return either Rock, Paper, or Scissors from array *
-    // Most likely don't need the randomWeapon =
 
 function computerPlay() {
     let weapons = ["rock", "paper", "scissors"]
     return weapons[Math.floor(Math.random() * weapons.length)];
 }
 
-// Create a fuction that will play a single round of RPS and declare a message for the winner 
-
-// when playRound is called (9 possibilites)
-    // if playerSelection = rock & computerSelection = paper, display winner
-    // if else repeat for each possibility
-    // else invalid choice 
-    // Make playerSelection parameter case-insensitive 
-    // Display Scores (added console.log scores for every possibility)
+// Create a fuction that will play a single round of RPS and declare a message for the winner:
+    // (9 possibilites) *
+    // Display winner and loser each call using if...else statements *
+    // Return "invalid choice" if selection is not part of choice *
+    // Make playerSelection parameter case-insensitive *
+    // Display Scores in console (added console.log scores for every possibility)
+    // Add a div for displaying results and change all of your console.logs into DOM methods.
 
 function playRound(playerSelection, computerSelection) {
     console.log(playerSelection)
     console.log(computerSelection)
-    
+    const results = document.querySelector('#results');
     // Rock 
     if (playerSelection === "rock" && computerSelection === "rock") {
-        console.log(playerScore)
-        console.log(computerScore)
-        return "Tie!"; 
+        // Target nodes and putting in variable to add textContent
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ ++playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ ++computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = 'Tie, No Points!';
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
+        return "Tie Game!"
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        console.log(playerScore)
-        console.log(++computerScore)
-        return "You Lose! Paper beats Rock"; 
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ ++computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = "You Lose! Paper beats Rock";
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
+        return "You Lose! Paper beats Rock"
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
-        console.log(++playerScore)
-        console.log(computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ ++playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = "You Win! Rock beats Scissors";
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "You Win! Rock beats Scissors"; 
     // Paper 
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        console.log(++playerScore)
-        console.log(computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ ++playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = "You Win! Paper beats Rock";
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "You Win! Paper beats Rock"; 
     } else if (playerSelection === "paper" && computerSelection === "paper") {
-        console.log(playerScore)
-        console.log(computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = 'Tie, No Points!';
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "Tie!"; 
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        console.log(playerScore)
-        console.log(++computerScore)
+         // Player Score 
+         const pScore = document.createElement('div');
+         pScore.textContent = 'Player Score: '+ playerScore;
+         // Computer Score 
+         const cScore = document.createElement('div');
+         cScore.textContent = 'Computer Score: '+ ++computerScore;
+         // Final Result 
+         const result = document.createElement('div');
+         result.textContent = "You Lose! Scissor beats Paper";
+         // Appending to DOM
+         results.appendChild(pScore);
+         results.appendChild(cScore);
+         results.appendChild(result);
         return "You Lose! Scissor beats Paper"; 
     // Scissors
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        console.log(playerScore)
-        console.log(++computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ ++computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = "You Lose! Rock beats Scissors";
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "You Lose! Rock beats Scissors"; 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        console.log(++playerScore)
-        console.log(computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ ++playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = "You Win! Scissors beats Paper";
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "You Win! Scissors beats Paper"; 
     } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-        console.log(playerScore)
-        console.log(computerScore)
+        // Player Score 
+        const pScore = document.createElement('div');
+        pScore.textContent = 'Player Score: '+ playerScore;
+        // Computer Score 
+        const cScore = document.createElement('div');
+        cScore.textContent = 'Computer Score: '+ computerScore;
+        // Final Result 
+        const result = document.createElement('div');
+        result.textContent = 'Tie, No Points!';
+        // Appending to DOM
+        results.appendChild(pScore);
+        results.appendChild(cScore);
+        results.appendChild(result);
         return "Tie!"; 
     } else {
         return "Invalid Choice!"
     } 
 }
+
+let playerSelection = "";
 
 /* Test Results of Function Call 
     let playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
@@ -89,6 +189,13 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0
 let computerScore = 0
 
+// Player Selection Choice - Event Listeners 
+// const btn = document.querySelector('#btn');
+// btn.addEventListener('click', () => {
+//   alert("You Picked Rock!");
+// });
+
+
 function game() {
     for (let i = 1; i <= 5; i++) {
         playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay());
@@ -102,22 +209,24 @@ function game() {
         return "Tie Game!";
     }
 }
-console.log(game())
 
-// 5 Round game w/o Loop
-    // Round 1 
-    //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
-    // Round 2
-    //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
-    // Round 3
-    //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
-    // Round 4
-    //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
-    // Round 5
-    //console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase(), computerPlay()));
+// Creating Buttons for PlayerChoice 
+const buttons = document.querySelectorAll('button');
+// Use method to iterate through buttons and add 'click' 
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playRound(button.id, computerPlay());
+    })
+})
 
-// Currently on
-    // 1. 
+// Testing Single Round Game With Buttons 
+// console.log(game())
+//console.log(playRound(prompt("Rock, Paper, or Scissors?").toLowerCase();, computerPlay()));
 
-// Questions
-    // 1. 
+/* Currently @
+1. Add a div for displaying results and change all of your console.logs into DOM methods.
+2. Working on the DOMS for rock vs rock 
+3. Refractor code for playRound into smaller codes 
+    - So, it looks like you have all that code repeated through all 9 if statements? If so, then yes that's not ideal. Save yourself some writing and make your function much more maintainable by eliminating the duplication. Don't be afraid to write extra functions.
+    - You can definitely make things a lot easier on yourself by moving some of that conditional code into a function or multiple functions and simplifying your playRound function.
+*/
